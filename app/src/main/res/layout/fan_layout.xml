@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_cyan_color_700"
+    android:orientation="vertical">
+    <com.geo.widget.FanView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fanview_1"
+        app:fan_leaf_height="90dp" />
+    <com.geo.widget.FanView
+        android:layout_toRightOf="@id/fanview_1"
+        android:id="@+id/fanview_2"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fan_leaf_height="50dp" />
+    <com.geo.widget.FanView
+        android:layout_marginTop="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fan_leaf_height="60dp" />
+</RelativeLayout>

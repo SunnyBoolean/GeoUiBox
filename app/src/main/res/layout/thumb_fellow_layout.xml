@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.geo.widget.WeiBoThumbView
+        android:id="@+id/weibo_thumb"
+        android:layout_gravity="center_horizontal"
+        app:drawable_normal="@drawable/video_interact_like_normal"
+        app:drawable_highlight="@drawable/video_interact_like_highlight"
+        app:light_color="#F48700"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.geo.widget.FelloMeView
+        android:id="@+id/fello_me_view"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

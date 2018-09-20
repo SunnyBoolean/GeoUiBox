@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!---->
+    <declare-styleable name="ProgressView">
+        <!-- 进度条半径 -->
+        <attr name="p_radio" format="dimension" />
+        <!-- 进度条颜色 -->
+        <attr name="p_color" format="reference|color" />
+        <!-- 小球半径 -->
+        <attr name="titleradio" format="dimension" />
+        <!-- 小球颜色 -->
+        <attr name="titlecolor" format="reference|color" />
+
+    </declare-styleable>
+    <declare-styleable name="ScanCycleView">
+        <!-- 进度条半径 -->
+        <attr name="s_radio" format="dimension" />
+        <!-- 进度条颜色 -->
+        <attr name="s_color" format="reference|color" />
+        <!-- 小球半径 -->
+        <attr name="s_titleradio" format="dimension" />
+        <!-- 小球颜色 -->
+        <attr name="s_titlecolor" format="reference|color" />
+        <!--是否留一个缺口-->
+        <attr name="issweep" format="boolean"></attr>
+        <!--缺口角度：0~360-->
+        <attr name="sweepangle" format="integer" />
+        <attr name="isgradlint" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressV1View">
+        <!-- 进度条半径 -->
+        <attr name="pv1_radio" format="dimension" />
+        <!-- 进度条颜色 -->
+        <attr name="pv1_color" format="reference|color" />
+        <!-- 圆环宽度 -->
+        <attr name="pv1_titleradio" format="dimension" />
+        <!-- 进度条颜色 -->
+        <attr name="pv1_titlecolor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="AlipayView">
+        <attr name="viewType">
+            <enum name="success" value="0" />
+            <enum name="failed" value="1" />
+        </attr>
+        <attr name="pay_normal_color" format="color" />
+        <attr name="pay_success_color" format="color" />
+        <attr name="pay_faled_color" format="color" />
+        <attr name="pay_radio" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="WeiBoThumbView">
+        <attr name="drawable_normal" format="reference" />
+        <attr name="drawable_highlight" format="reference" />
+        <attr name="light_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ExpendTvContainerView">
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color"></attr>
+        <attr name="lineSpacingExtra" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="FelloMeView">
+        <attr name="icon_color" format="color"></attr>
+        <attr name="bg_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="TinkView">
+        <attr name="text_color" format="color"></attr>
+        <attr name="text_size" format="dimension"></attr>
+        <attr name="line_margin" format="dimension"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="WeatherView">
+        <attr name="line_color" format="color"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="VPTabLayout">
+        <!--字体大小-->
+        <attr name="vpTextSize" format="dimension"></attr>
+        <attr name="vpLineHeight" format="dimension"></attr>
+        <!-- 指示器颜色-->
+        <attr name="vpIndicatorColor" format="color"></attr>
+        <!--文字正常颜色-->
+        <attr name="vpTextNormalColor" format="color"></attr>
+        <!--文字被选中的颜色-->
+        <attr name="vpTextSelectedColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="NumberEditText">
+        <!--下划线的高度-->
+        <attr name="et_line_height" format="dimension"></attr>
+        <!-- 高亮的颜色-->
+        <attr name="et_highlinght_color"  format="color"></attr>
+        <!--正常情况下的颜色-->
+        <attr name="et_normal_color" format="color"></attr>
+        <!-- 密码的位数-->
+        <attr name="et_num_total" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="FanView">
+        <!--每一片叶子的长度-->
+        <attr name="fan_leaf_height" format="dimension"></attr>
+    </declare-styleable>
+</resources>
