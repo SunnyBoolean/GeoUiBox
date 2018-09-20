@@ -18,3 +18,5 @@
 
 #### 四、华为控件
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B61.gif)        ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B62.gif)
+
+有点奇怪
