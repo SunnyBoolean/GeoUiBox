@@ -6,6 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
         android:orientation="vertical">
         <Button
             android:layout_marginTop="30dp"
@@ -14,7 +15,6 @@
             android:id="@+id/main_text_bse_btn"
             android:text="贝塞尔" />
         <Button
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/main_text_shader_btn"
@@ -62,5 +62,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/main_text_fan_btn"
             android:text="风扇" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_text_wave_btn"
+            android:text="波浪" />
     </LinearLayout>
 </ScrollView>

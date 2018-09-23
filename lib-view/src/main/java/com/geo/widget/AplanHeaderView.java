@@ -28,8 +28,8 @@ public class AplanHeaderView extends View {
     private float mPathLength;
     private Path mPath;
     private int mDotRadio = 20;
-    private Bitmap mLeftBitmap, mRightBitmap,mEyeBitmap;
-    private Matrix mMatrix, mMatrix1,mMatrix2;
+    private Bitmap mLeftBitmap, mRightBitmap, mEyeBitmap;
+    private Matrix mMatrix, mMatrix1, mMatrix2;
     float leftPositoin[] = new float[2];  //坐标值
     float leftTan[] = new float[2];//正切值
 
@@ -69,7 +69,7 @@ public class AplanHeaderView extends View {
 
         mLeftBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon_aplan_left);
         mRightBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon_aplan_left);
-        mEyeBitmap=BitmapFactory.decodeResource(getResources(), R.drawable.icon_logo_eye);
+        mEyeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon_logo_eye);
     }
 
     private void initPath() {
@@ -108,7 +108,7 @@ public class AplanHeaderView extends View {
                 measure.getPosTan(leftDistance, leftPositoin, leftTan);
 
                 //右侧动画
-                rightDistance = 2*height + (mPathLength - 2 * height - width) - leftDistance;
+                rightDistance = 2 * height + (mPathLength - 2 * height - width) - leftDistance;
                 measure.getPosTan(rightDistance, rightPositoin, rightTan);
                 invalidate();
             }
@@ -146,6 +146,7 @@ public class AplanHeaderView extends View {
 
 
     private float mCurDrgee;
+
     private void startSlideAnima() {
         ValueAnimator animator = ValueAnimator.ofFloat(0, 115);  //这里要减去球的半径
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -204,8 +205,8 @@ public class AplanHeaderView extends View {
             float degrees = (float) (Math.atan2(leftTan[1], leftTan[0]) * 180.0 / Math.PI);
             mMatrix.reset();
             mMatrix.postTranslate(leftPositoin[0] - mLeftBitmap.getWidth() / 2 - 10, leftPositoin[1] - mLeftBitmap.getHeight() / 2 - 20);   // 将图片绘制中心调整到与当前点重合
-            canvas.drawBitmap(mLeftBitmap, mMatrix, mBgPaint);            mMatrix.postRotate(degrees, mLeftBitmap.getWidth() / 2, mLeftBitmap.getHeight() / 2);   // 旋转图片
-
+            canvas.drawBitmap(mLeftBitmap, mMatrix, mBgPaint);
+            mMatrix.postRotate(degrees, mLeftBitmap.getWidth() / 2, mLeftBitmap.getHeight() / 2);   // 旋转图片
 
 
             //计算旋转角度
@@ -218,18 +219,18 @@ public class AplanHeaderView extends View {
             //左侧滑板竖起动画
             mMatrix.reset();
             mMatrix.postRotate(-mCurDrgee, mLeftBitmap.getWidth() / 2, mLeftBitmap.getHeight() / 2);   // 旋转图片
-            mMatrix.postTranslate(leftPositoin[0] - mLeftBitmap.getWidth() / 2+55 , leftPositoin[1] - mLeftBitmap.getHeight() / 2 - mCurDrgee*2);   // 将图片绘制中心调整到与当前点重合
+            mMatrix.postTranslate(leftPositoin[0] - mLeftBitmap.getWidth() / 2 + 55, leftPositoin[1] - mLeftBitmap.getHeight() / 2 - mCurDrgee * 2);   // 将图片绘制中心调整到与当前点重合
             canvas.drawBitmap(mLeftBitmap, mMatrix, mBgPaint);
 
             //右侧滑板竖起动画
             mMatrix1.reset();
             mMatrix1.postRotate(mCurDrgee, mRightBitmap.getWidth() / 2, mRightBitmap.getHeight() / 2);   // 旋转图片
-            mMatrix1.postTranslate(rightPositoin[0] - mRightBitmap.getWidth() / 2-55 , rightPositoin[1] - mRightBitmap.getHeight() / 2 - mCurDrgee*2);   // 将图片绘制中心调整到与当前点重合
+            mMatrix1.postTranslate(rightPositoin[0] - mRightBitmap.getWidth() / 2 - 55, rightPositoin[1] - mRightBitmap.getHeight() / 2 - mCurDrgee * 2);   // 将图片绘制中心调整到与当前点重合
             canvas.drawBitmap(mRightBitmap, mMatrix1, mBgPaint);
 
 
             mMatrix2.reset();
-            mMatrix2.postTranslate(getWidth()/2 -45, rightPositoin[1] - mRightBitmap.getHeight() / 2 - mCurDrgee*2);   // 将图片绘制中心调整到与当前点重合
+            mMatrix2.postTranslate(getWidth() / 2 - 45, rightPositoin[1] - mRightBitmap.getHeight() / 2 - mCurDrgee * 2);   // 将图片绘制中心调整到与当前点重合
             canvas.drawBitmap(mEyeBitmap, mMatrix2, mBgPaint);
 
         }

@@ -61,6 +61,7 @@ public class CommonActivity extends BaseActivity {
             }
             case 2:{//雷达
                 setContentView(R.layout.radaw_layout);
+                break;
             }
             case 3:{
                 setContentView(R.layout.expend_textview_layout);
@@ -100,6 +101,11 @@ public class CommonActivity extends BaseActivity {
             }
             case 6:{//发电机风扇
                 setContentView(R.layout.fan_layout);
+                break;
+            }
+            case 7:{ //波浪
+                setContentView(R.layout.wave_layout);
+                break;
             }
 
         }

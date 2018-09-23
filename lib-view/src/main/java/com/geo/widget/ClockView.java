@@ -26,7 +26,7 @@ import java.util.TimerTask;
 /**
  * Created by liwei on 2018/9/20.
  * 秒表计时器
- * 重点就是扇形渐变、PathEffect、利用矩阵使画布不停旋转
+ * 重点就是扇形渐变SweepGradient、PathEffect、利用矩阵使画布不停旋转
  */
 
 public class ClockView extends View {

@@ -6,19 +6,22 @@
 
     <com.geo.widget.BallProgressView
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <com.geo.widget.test.BezierTestView
+        android:layout_width="800dp"
+        android:layout_height="800dp"
+        android:visibility="gone" />
 
     <com.geo.widget.test.BezierPathTestView
         android:layout_width="800dp"
-        android:layout_height="900dp"
-         />
+        android:layout_height="900dp" />
 
     <com.geo.widget.BezierPathView
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_height="match_parent"
-       ></com.geo.widget.BezierPathView>
+        android:visibility="gone"></com.geo.widget.BezierPathView>
 </RelativeLayout>

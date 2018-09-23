@@ -17,6 +17,11 @@ import com.geostar.liwei.lib_view.R;
 /**
  * Created by liwei on 2018/9/20.
  * 风力发电机--风扇
+ * 【思路：
+ *         叶子的长度是自定义属性，在使用时在布局文件指定一个值，杆子的长度是叶子长度的2.5倍。
+ *         首先绘制12点钟方向的一片叶子，然后依次旋转画布120°、240°以完成三片叶子。
+ *         同时启动动画，利用Matrix对画布进行不停的旋转即可。
+ * 】
  */
 
 public class FanView extends View {

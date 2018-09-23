@@ -171,7 +171,6 @@ public class AlipayView extends View {
      * 对勾路径动画
      */
     private void animaOkLine() {
-
         ObjectAnimator animator = ObjectAnimator.ofFloat(mSuccessEntry, "x", "y", mAnimaOkPath);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override

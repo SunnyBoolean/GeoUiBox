@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends BaseActivity {
-    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn;
+    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn;
     Button mBseBtn;
 
     @Override
@@ -26,6 +26,7 @@ public class MainActivity extends BaseActivity {
         mBseBtn = (Button)findViewById(R.id.main_text_bse_btn);
         mClockBtn = (Button) findViewById(R.id.main_text_clock_btn);
         mFanBtn = (Button) findViewById(R.id.main_text_fan_btn);
+        mWaveBtn = (Button)findViewById(R.id.main_text_wave_btn);
     }
 
     @Override
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity {
         mBseBtn.setOnClickListener(this);
         mClockBtn.setOnClickListener(this);
         mFanBtn.setOnClickListener(this);
+        mWaveBtn.setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,11 @@ public class MainActivity extends BaseActivity {
                 intent.setClass(mContext, CommonActivity.class);
                 intent.putExtra("title", "天气---风扇");
                 intent.putExtra("type", 6);
+                break;
+            case R.id.main_text_wave_btn:
+                intent.setClass(mContext, CommonActivity.class);
+                intent.putExtra("title", "波浪");
+                intent.putExtra("type", 7);
                 break;
 
         }
