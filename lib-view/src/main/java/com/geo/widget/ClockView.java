@@ -60,7 +60,7 @@ public class ClockView extends View {
         mOutPaint.setStrokeWidth(1);
         mOutPaint.setColor(getContext().getColor(R.color.material_grey_color_300));
         mOutPaint.setStyle(Paint.Style.STROKE);
-        mOutPaint.setAntiAlias(true);A
+        mOutPaint.setAntiAlias(true);
 
         //关闭硬件加速
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
