@@ -31,7 +31,7 @@
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E7%82%B9%E8%B5%9E%E5%92%8C%E5%85%B3%E6%B3%A8.gif)
 
 #### <h4 id=4> 4、华为控件</h4>
-![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B61.gif)![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B62.gif)
+![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B61.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%8D%8E%E4%B8%BA%E6%8E%A7%E4%BB%B62.gif)
 
 #### <h4 id=5>5、雷达效果图</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E9%9B%B7%E8%BE%BE.gif)
