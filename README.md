@@ -13,7 +13,7 @@
 [9.TextView展开和收起](#9) </br>
 [10.秒表计时器（华为）](#10) </br>
 [11.大风车（华为天气）](#11) </br>
-
+[12.时钟（华为）](#12) </br>
 
 ---------------------
 
@@ -53,3 +53,6 @@
 
 #### <h4 id=11>11、大风车</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E5%A4%A7%E9%A3%8E%E8%BD%A6.gif)
+
+#### <h4 id=12>12、华为时钟</h4>
+![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E6%97%B6%E9%92%9F.gif)
