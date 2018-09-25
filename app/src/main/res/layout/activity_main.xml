@@ -55,7 +55,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/main_text_clock_btn"
-            android:text="秒表计时器" />
+            android:text="秒表计时器（华为）" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_text_clock_sz_btn"
+            android:text="时钟（华为）" />
         <Button
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"

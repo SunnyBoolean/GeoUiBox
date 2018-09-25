@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.geo.widget.ClockView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/clock_view"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clock_view"
+        android:text="中国标准时间"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/material_grey_color_800"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

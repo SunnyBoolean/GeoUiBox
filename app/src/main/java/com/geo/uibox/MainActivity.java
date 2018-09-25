@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends BaseActivity {
-    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn;
+    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn,mSzBtn;
     Button mBseBtn;
 
     @Override
@@ -27,6 +27,7 @@ public class MainActivity extends BaseActivity {
         mClockBtn = (Button) findViewById(R.id.main_text_clock_btn);
         mFanBtn = (Button) findViewById(R.id.main_text_fan_btn);
         mWaveBtn = (Button)findViewById(R.id.main_text_wave_btn);
+        mSzBtn = (Button)findViewById(R.id.main_text_clock_sz_btn);
     }
 
     @Override
@@ -42,6 +43,7 @@ public class MainActivity extends BaseActivity {
         mClockBtn.setOnClickListener(this);
         mFanBtn.setOnClickListener(this);
         mWaveBtn.setOnClickListener(this);
+        mSzBtn.setOnClickListener(this);
     }
 
     @Override
@@ -94,6 +96,11 @@ public class MainActivity extends BaseActivity {
                 intent.setClass(mContext, CommonActivity.class);
                 intent.putExtra("title", "波浪");
                 intent.putExtra("type", 7);
+                break;
+            case R.id.main_text_clock_sz_btn://时钟
+                intent.setClass(mContext, CommonActivity.class);
+                intent.putExtra("title", "时钟");
+                intent.putExtra("type", 8);
                 break;
 
         }

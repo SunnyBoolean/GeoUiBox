@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.geo.widget.ClockView;
+import com.geo.widget.TimerView;
 import com.geo.widget.ExpendTvContainerView;
 import com.geo.widget.FelloMeView;
 import com.geo.widget.ProgressViewV2View;
@@ -75,26 +75,26 @@ public class CommonActivity extends BaseActivity {
                 break;
             case 5:{ //秒表计时器
                 setContentView(R.layout.clock_view);
-                final ClockView clockView = (ClockView) findViewById(R.id.clock_view);
+                final TimerView timerView = (TimerView) findViewById(R.id.clock_view);
                 Button start = (Button) findViewById(R.id.clock_start);
                 Button pause = (Button) findViewById(R.id.clock_pause);
                 Button end = (Button) findViewById(R.id.clock_end);
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        clockView.start();
+                        timerView.start();
                     }
                 });
                 pause.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        clockView.pause();
+                        timerView.pause();
                     }
                 });
                 end.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        clockView.pause();
+                        timerView.pause();
                     }
                 });
                 break;
@@ -106,6 +106,9 @@ public class CommonActivity extends BaseActivity {
             case 7:{ //波浪
                 setContentView(R.layout.wave_layout);
                 break;
+            }
+            case 8:{//时钟
+                setContentView(R.layout.clock_sz_layout);
             }
 
         }
