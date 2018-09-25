@@ -10,6 +10,7 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -17,6 +18,7 @@ import android.view.View;
  */
 
 public class BezierTestView extends View {
+    Paint mPaint;
     public BezierTestView(Context context) {
         super(context);
         init();
@@ -31,26 +33,45 @@ public class BezierTestView extends View {
         super(context, attrs, defStyleAttr);
         init();
     }
-
-    private void init() {
-        drawSin();
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        Log.e("ZSAE","大小："+w+"   "+h);
     }
 
-    Paint mPaint = new Paint();
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    private void init() {
+        mPaint = new Paint();
         mPaint.setColor(Color.RED);
         mPaint.setStrokeWidth(3);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setAntiAlias(true);
+        startAnima();
+    }
+    float x;
+    private void startAnima(){
+        ValueAnimator animator = ValueAnimator.ofFloat(-30,30);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                x= (float) animation.getAnimatedValue();
+                postInvalidate();
+            }
+        });
+        animator.setDuration(3000);
+        animator.setRepeatCount(-1);
+        animator.start();
+    }
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        canvas.translate(500,500);
+        float y = (float) Math.sqrt(30*30-x*x);
+        canvas.drawCircle(x,y,10,mPaint);
 
-//        canvas.drawPath(mPath, mPaint);
-        canvas.drawCircle(pointF.x,pointF.y,10,mPaint);
-        canvas.drawPoint(dx,dy,mPaint);
-        canvas.drawPath(mPath,mPaint);
-        userQuadTo(canvas);
+//        canvas.drawCircle(pointF.x,pointF.y,10,mPaint);
+//        canvas.drawPoint(dx,dy,mPaint);
+//        canvas.drawPath(mPath,mPaint);
+//        userQuadTo(canvas);
     }
 
     Path mPath = new Path();

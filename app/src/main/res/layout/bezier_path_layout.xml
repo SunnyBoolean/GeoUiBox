@@ -14,10 +14,11 @@
     <com.geo.widget.test.BezierTestView
         android:layout_width="800dp"
         android:layout_height="800dp"
-        android:visibility="gone" />
+        />
 
     <com.geo.widget.test.BezierPathTestView
         android:layout_width="800dp"
+        android:visibility="gone"
         android:layout_height="900dp" />
 
     <com.geo.widget.BezierPathView

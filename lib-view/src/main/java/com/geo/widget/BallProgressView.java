@@ -23,7 +23,7 @@ public class BallProgressView extends View {
     protected int mViewWidth, mViewHeight;
     protected int mWidth, mHeight;
     private float r, rArc, x;
-    private float percent = 0f;
+    private float percent = 10f;
     private RectF rectF;
 
     public BallProgressView(Context context) {
