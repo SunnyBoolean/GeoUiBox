@@ -12,8 +12,8 @@
         android:visibility="gone" />
 
     <com.geo.widget.test.BezierTestView
-        android:layout_width="800dp"
-        android:layout_height="800dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         />
 
     <com.geo.widget.test.BezierPathTestView

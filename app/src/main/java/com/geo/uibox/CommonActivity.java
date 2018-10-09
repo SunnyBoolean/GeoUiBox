@@ -1,14 +1,21 @@
 package com.geo.uibox;
 
+import android.media.MediaRecorder;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.geo.widget.AudionWaveView;
 import com.geo.widget.TimerView;
 import com.geo.widget.ExpendTvContainerView;
 import com.geo.widget.FelloMeView;
 import com.geo.widget.ProgressViewV2View;
 import com.geo.widget.WeiBoThumbView;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by liwei on 2018/9/18.
@@ -109,6 +116,7 @@ public class CommonActivity extends BaseActivity {
             }
             case 8:{//时钟
                 setContentView(R.layout.clock_sz_layout);
+                break;
             }
 
         }

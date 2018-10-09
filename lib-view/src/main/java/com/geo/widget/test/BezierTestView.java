@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.PointF;
+import android.graphics.Region;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -19,6 +20,7 @@ import android.view.View;
 
 public class BezierTestView extends View {
     Paint mPaint;
+    Path mSinPath;
     public BezierTestView(Context context) {
         super(context);
         init();
@@ -33,86 +35,61 @@ public class BezierTestView extends View {
         super(context, attrs, defStyleAttr);
         init();
     }
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        Log.e("ZSAE","大小："+w+"   "+h);
-    }
-
     private void init() {
         mPaint = new Paint();
         mPaint.setColor(Color.RED);
         mPaint.setStrokeWidth(3);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setAntiAlias(true);
-        startAnima();
+        mSinPath=new Path();
+        mSinPath.moveTo(0,0);
+        drawSinAnima();
     }
-    float x;
-    private void startAnima(){
-        ValueAnimator animator = ValueAnimator.ofFloat(-30,30);
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                x= (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
-        });
-        animator.setDuration(3000);
-        animator.setRepeatCount(-1);
-        animator.start();
-    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.translate(500,500);
-        float y = (float) Math.sqrt(30*30-x*x);
-        canvas.drawCircle(x,y,10,mPaint);
-
-//        canvas.drawCircle(pointF.x,pointF.y,10,mPaint);
-//        canvas.drawPoint(dx,dy,mPaint);
-//        canvas.drawPath(mPath,mPaint);
-//        userQuadTo(canvas);
+        //绘制sin曲线
+        drawSin(canvas);
+        drawBsr(canvas);
+    }
+    private void drawBsr(Canvas canvas){
+        canvas.save();
+        canvas.translate(100,100);
+        Path path = new Path();
+        path.moveTo(100,100);
+        path.quadTo(200,-20,300,100);//(200,0;300,100)
+        path.quadTo(350,180,200,300);
+        path.quadTo(50,180,100,100);
+        canvas.drawPath(path,mPaint);
+        canvas.restore();
     }
 
-    Path mPath = new Path();
-    PointF pointF = new PointF();
-    Point point=new Point();
-    float dx,dy;
-    private void drawSin() {
-        ValueAnimator animator = ValueAnimator.ofFloat(0, 6);
+    /**
+     * 绘制sin曲线
+     * @param canvas
+     */
+    private void drawSin(Canvas canvas){
+        canvas.save();
+        canvas.translate(0,300);
+        canvas.drawPath(mSinPath,mPaint);
+        canvas.restore();
+    }
+    /**
+     * 动态绘制一条Sin()函数曲线
+     */
+    private void drawSinAnima() {
+        ValueAnimator animator = ValueAnimator.ofFloat(0, 1080);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float x = (float) animation.getAnimatedValue();
-                float y = (float) (2.58 * Math.cos((2 * Math.PI * x) / 4.65));
-                dx=x;
-                dy=y;
-                point.set((int)x,(int)y);
-//                mPath.rQuadTo(x,y,x,1);
-//                mPath.rq;
-
-                pointF.offset(x,y);
+                float y = (float) (50 * Math.cos((2 * Math.PI * x) / 180));  //这个就是计算sin的值函数
+                mSinPath.lineTo(x,y);
                 invalidate();
             }
         });
         animator.setDuration(5000);
         animator.start();
-    }
-
-    /**
-     * Path的rQuadTo和quadTo都是四个参数，并且前两个数子是控制点坐标，后两个数字是结束点坐标
-     * 但是rQuadTo的坐标参数都是相对于上一个数据点的坐标的，因此实际坐标=上一个数据点的坐标+参数。
-     *
-     * @param canvas
-     */
-    private void userQuadTo(Canvas canvas) {
-
-        Path p = new Path();
-        p.moveTo(200, 250);
-        //rQuadTo的坐标是相对于上一个数据点的坐标
-        //在这里，上一个数据点坐标是（200，200），所以这里四个参数都是相对于（200，200）的坐标
-        //也就是说实际的控制点坐标和终点坐标都是在（200，200）的基础上之和。即：dx1=200+100，dy1=300+250，dx2=200+200，dy2=0+250
-        p.rQuadTo(100, 300, 200, 0);
-        canvas.drawPath(p, mPaint);
     }
 }

@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.geo.widget.AudionWaveView;
+
 public class MainActivity extends BaseActivity {
-    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn,mSzBtn;
+    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn,mSzBtn,mAutionWave;
     Button mBseBtn;
 
     @Override
@@ -28,6 +30,7 @@ public class MainActivity extends BaseActivity {
         mFanBtn = (Button) findViewById(R.id.main_text_fan_btn);
         mWaveBtn = (Button)findViewById(R.id.main_text_wave_btn);
         mSzBtn = (Button)findViewById(R.id.main_text_clock_sz_btn);
+        mAutionWave = (Button)findViewById(R.id.main_text_audionwave_btn);
     }
 
     @Override
@@ -44,6 +47,7 @@ public class MainActivity extends BaseActivity {
         mFanBtn.setOnClickListener(this);
         mWaveBtn.setOnClickListener(this);
         mSzBtn.setOnClickListener(this);
+        mAutionWave.setOnClickListener(this);
     }
 
     @Override
@@ -101,6 +105,9 @@ public class MainActivity extends BaseActivity {
                 intent.setClass(mContext, CommonActivity.class);
                 intent.putExtra("title", "时钟");
                 intent.putExtra("type", 8);
+                break;
+            case R.id.main_text_audionwave_btn://录音波浪
+                intent.setClass(mContext, AudionWaveActivity.class);
                 break;
 
         }

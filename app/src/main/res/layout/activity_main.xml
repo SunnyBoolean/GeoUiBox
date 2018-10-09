@@ -72,6 +72,12 @@
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/main_text_audionwave_btn"
+            android:text="录音波纹" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/main_text_wave_btn"
             android:text="波浪" />
     </LinearLayout>
