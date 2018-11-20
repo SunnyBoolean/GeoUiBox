@@ -1,4 +1,4 @@
-此项目是我工作以来对各种ui控件的总结而成，包括平时学习、预研、以及根据ui设计师的要求来自定义的各种View。大家可以借鉴、使用、提issure，如果直接clone使用到项目注明一下来源哈，如果能帮助到你，不要吝啬你的star~，如需要交流可以加我QQ：**981411335**。（图片不分先后）
+此项目是我工作以来对各种ui控件的总结而成，包括平时学习、预研、以及根据ui设计师的要求来自定义的各种View。大家可以借鉴、使用、提issure，如果直接clone使用到项目注明一下来源哈，如需要交流可以加我QQ：**981411335**。
 
 
 ---
@@ -14,7 +14,8 @@
 [10.秒表计时器（华为）](#10) </br>
 [11.大风车（华为天气）](#11) </br>
 [12.时钟（华为）](#12) </br>
-
+[13.登录效果按钮](#13) </br>
+[14.温度仪表盘指示器](#12) </br>
 ---------------------
 
 ####<h4 id=1> 1、内容逐渐显示View</h4>
@@ -56,3 +57,12 @@
 
 #### <h4 id=12>12、华为时钟</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E6%97%B6%E9%92%9F.gif)
+
+#### <h4 id=12>12、登录效果按钮</h4>
+![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E7%99%BB%E5%BD%95%E6%8C%89%E9%92%AE.gif)
+
+#### <h4 id=12>12、温度仪表盘</h4>
+![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E6%B8%A9%E5%BA%A6%E4%BB%AA%E8%A1%A8%E7%9B%98.gif)
+
+
+
