@@ -6,8 +6,11 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.geo.widget.AudionWaveView;
+import com.geo.widget.DashBoradView;
+import com.geo.widget.LoginView;
 import com.geo.widget.TimerView;
 import com.geo.widget.ExpendTvContainerView;
 import com.geo.widget.FelloMeView;
@@ -116,6 +119,24 @@ public class CommonActivity extends BaseActivity {
             }
             case 8:{//时钟
                 setContentView(R.layout.clock_sz_layout);
+                break;
+            }
+            case 9:{//登录效果
+                setContentView(R.layout.login_view);
+                final LoginView view = (LoginView) findViewById(R.id.loginview);
+                view.setOnLoginListener(new LoginView.OnLoginListener() {
+                    @Override
+                    public void onLogin() {
+                            //这里开始做登录操作
+//                        Toast.makeText(mContext,"开始登录了",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                break;
+            }
+            case 10:{//仪表盘
+                setContentView(R.layout.dashborad_view);
+                DashBoradView view = (DashBoradView) findViewById(R.id.dashbroadview);
+                view.setDrgee(12f);
                 break;
             }
 

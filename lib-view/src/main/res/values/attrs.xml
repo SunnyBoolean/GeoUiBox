@@ -101,4 +101,12 @@
         <!--每一片叶子的长度-->
         <attr name="fan_leaf_height" format="dimension"></attr>
     </declare-styleable>
+    <declare-styleable name="LoginView">
+        <!--每一片叶子的长度-->
+        <attr name="textsize" format="dimension"></attr>
+        <attr name="text" format="string"></attr>
+        <attr name="ltextColor" format="color"></attr>
+        <attr name="bg" format="color"></attr>
+        <attr name="pressbg" format="color"></attr>
+    </declare-styleable>
 </resources>

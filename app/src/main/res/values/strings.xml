@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GeoUiBox</string>
+    <string name="as">{"msg":"登入成功","data":[{"UID":"4051d38b-f1f2-49e6-987f-fee6f46d9620","xm":"杨显飞","sj":"2018-11-19 17:22:45","roles":[{"checked":false,"description":"外观查验员","id":6,"roleLevel":1,"roleMark":"{\"gwjs\":[{\"gwid\":\"1\",\"desc\":\"外观查验员\"}]}","roleName":"外观查验员","roleSign":"wgcyy"},{"checked":false,"description":"外观查验","id":10,"roleLevel":1,"roleMark":"{\"gwjs\":[{\"gwid\":\"1\",\"desc\":\"外观查验员\"}]}","roleName":"外观查验","roleSign":"wgcy"}],"sfzmhm":"52222419780630241X"}],"status":1}</string>
 </resources>

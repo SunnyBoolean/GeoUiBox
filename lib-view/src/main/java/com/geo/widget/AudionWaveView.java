@@ -41,7 +41,7 @@ public class AudionWaveView extends View {
 
     private void init() {
         mPaint = new Paint();
-        mPaint.setStrokeWidth(20);
+        mPaint.setStrokeWidth(3);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(getContext().getColor(R.color.material_teal_300));
         mPaint.setAntiAlias(true);
@@ -50,11 +50,11 @@ public class AudionWaveView extends View {
 //        startAnima();
     }
 
-    float x, y;
+    float x, y=0;
     float dy;
     final Random random = new Random();
     public void setAudio(int audio) {
-        y = -audio * 20;
+        y = audio;
         invalidate();
     }
     private void startAnima(){
@@ -108,12 +108,18 @@ public class AudionWaveView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.translate(0,300);
-        for(int i=0;i<100;i++){
-            if(y>0){
-                dy=random.nextInt((int)Math.abs(y));
+        int org= 5;
+        for(int i=0;i<20;i++){
+            canvas.translate(10,0);
+            if(i<10){
+                org=org+5;
+            }else{
+                org=org-5;
             }
-            canvas.translate(50,0);
-            canvas.drawLine(0,0,0,-dy,mPaint);
+            if(i>7&&i<10){
+                org= (int) (org+y);
+            }
+            canvas.drawLine(0,-org/2,0,org/2,mPaint);
         }
 //        canvas.drawLine(0,0,1080,0,mPaint
 //        );

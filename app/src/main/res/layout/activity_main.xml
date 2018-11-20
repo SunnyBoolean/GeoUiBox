@@ -75,10 +75,29 @@
             android:id="@+id/main_text_audionwave_btn"
             android:text="录音波纹" />
         <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_text_wave_btn"
+        android:text="波浪" />
+
+        <Button
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/main_text_wave_btn"
-            android:text="波浪" />
+            android:id="@+id/main_text_listview_btn"
+            android:text="多级菜单" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_text_login_btn"
+            android:text="登录按钮效果" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_text_ybp_btn"
+            android:text="温度仪表盘" />
     </LinearLayout>
 </ScrollView>

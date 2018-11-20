@@ -7,6 +7,8 @@
     <com.geo.widget.AudionWaveView
         android:id="@+id/audion_wave"
         android:layout_width="match_parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="60dp"
         android:layout_height="match_parent" />
     <Button
         android:layout_width="match_parent"

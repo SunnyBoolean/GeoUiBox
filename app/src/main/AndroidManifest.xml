@@ -49,6 +49,7 @@
             android:label="公用界面展示"/>
         <activity android:name=".AudionWaveActivity"
             android:label="录音波纹"/>
+        <activity android:name=".MuiltListViewActivity"></activity>
     </application>
 
 </manifest>

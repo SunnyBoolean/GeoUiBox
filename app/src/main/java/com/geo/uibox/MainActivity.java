@@ -2,14 +2,18 @@ package com.geo.uibox;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.geo.widget.AudionWaveView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends BaseActivity {
-    Button mShaderLineBtn, mAliPayBtn, mThumbBtn,mHwBtn,mRadarBtn,mExtendBtn,mClockBtn,mFanBtn,mWaveBtn,mSzBtn,mAutionWave;
-    Button mBseBtn;
+    Button mShaderLineBtn, mAliPayBtn, mThumbBtn, mHwBtn, mRadarBtn, mExtendBtn, mClockBtn, mFanBtn, mWaveBtn, mSzBtn, mAutionWave;
+    Button mBseBtn, mMoreListView, mLoginView, mYbpView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +27,17 @@ public class MainActivity extends BaseActivity {
         mAliPayBtn = (Button) findViewById(R.id.main_text_alipay_btn);
         mThumbBtn = (Button) findViewById(R.id.main_text_thumb_btn);
         mHwBtn = (Button) findViewById(R.id.main_text_huawei_btn);
-        mRadarBtn =(Button) findViewById(R.id.main_text_rand_btn);
-        mExtendBtn = (Button)findViewById(R.id.main_text_extend_btn);
-        mBseBtn = (Button)findViewById(R.id.main_text_bse_btn);
+        mRadarBtn = (Button) findViewById(R.id.main_text_rand_btn);
+        mExtendBtn = (Button) findViewById(R.id.main_text_extend_btn);
+        mBseBtn = (Button) findViewById(R.id.main_text_bse_btn);
         mClockBtn = (Button) findViewById(R.id.main_text_clock_btn);
         mFanBtn = (Button) findViewById(R.id.main_text_fan_btn);
-        mWaveBtn = (Button)findViewById(R.id.main_text_wave_btn);
-        mSzBtn = (Button)findViewById(R.id.main_text_clock_sz_btn);
-        mAutionWave = (Button)findViewById(R.id.main_text_audionwave_btn);
+        mWaveBtn = (Button) findViewById(R.id.main_text_wave_btn);
+        mSzBtn = (Button) findViewById(R.id.main_text_clock_sz_btn);
+        mAutionWave = (Button) findViewById(R.id.main_text_audionwave_btn);
+        mMoreListView = (Button) findViewById(R.id.main_text_listview_btn);
+        mLoginView = (Button) findViewById(R.id.main_text_login_btn);
+        mYbpView = (Button) findViewById(R.id.main_text_ybp_btn);
     }
 
     @Override
@@ -48,6 +55,47 @@ public class MainActivity extends BaseActivity {
         mWaveBtn.setOnClickListener(this);
         mSzBtn.setOnClickListener(this);
         mAutionWave.setOnClickListener(this);
+        mMoreListView.setOnClickListener(this);
+        mLoginView.setOnClickListener(this);
+        mYbpView.setOnClickListener(this);
+
+        mAutionWave.setText(Html.fromHtml("测试"));
+    }
+
+    private void dosth() {
+        String str = getString(R.string.as);
+
+        JSONObject json = null;
+        try {
+//            Object objs=JSONObject.parse();
+            String newStr = JSONObject.quote(str);
+            json = new JSONObject(newStr);
+            JSONArray obj = json.getJSONArray("data");
+            String uid = obj.getJSONObject(0).getString("UID");
+            String sj = obj.getJSONObject(0).getString("sj");
+            String xm = obj.getJSONObject(0).getString("xm");
+            JSONArray array = obj.getJSONObject(0).getJSONArray("roles");
+            String[] roles = new String[array.length()];
+            for (int i = 0; i < array.length(); i++) {
+//                String res = array.getString(i);
+                JSONObject json1 = array.getJSONObject(i);
+//                String ad = json1.getString("roleMark");
+
+                JSONObject obj1 = json1.getJSONObject("roleMark");
+                JSONArray array1 = obj1.getJSONArray("gwjs");
+                for (int j = 0; j < array1.length(); j++) {
+//                    String st = array1.getString(i);
+                    JSONObject jb = array1.getJSONObject(j);
+                    String id = jb.getString("gwid");
+                    String name = jb.getString("desc");
+                    Log.e("asxsa", id + "  " + name);
+                }
+//                roles[i] = res;
+            }
+            Log.e("asxsa", uid + "  " + sj + "  " + xm);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -56,6 +104,7 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.main_text_shader_btn://内容逐渐显示效果
+
                 intent.setClass(mContext, TinkViewActivity.class);
                 break;
             case R.id.main_text_alipay_btn://支付效果
@@ -109,8 +158,23 @@ public class MainActivity extends BaseActivity {
             case R.id.main_text_audionwave_btn://录音波浪
                 intent.setClass(mContext, AudionWaveActivity.class);
                 break;
-
+            case R.id.main_text_listview_btn://多级菜单
+                intent.setClass(mContext, MuiltListViewActivity.class);
+                break;
+            case R.id.main_text_login_btn: {//登录效果
+                intent.setClass(mContext, CommonActivity.class);
+                intent.putExtra("title", "登录按钮效果");
+                intent.putExtra("type", 9);
+                break;
+            }
+            case R.id.main_text_ybp_btn: {//仪表盘
+                intent.setClass(mContext, CommonActivity.class);
+                intent.putExtra("title", "温度仪表盘");
+                intent.putExtra("type", 10);
+                break;
+            }
         }
+//        dosth();
         startActivity(intent);
     }
 
