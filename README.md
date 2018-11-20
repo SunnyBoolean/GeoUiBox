@@ -58,10 +58,10 @@
 #### <h4 id=12>12、华为时钟</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E6%97%B6%E9%92%9F.gif)
 
-#### <h4 id=12>12、登录效果按钮</h4>
+#### <h4 id=13>13、登录效果按钮</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E7%99%BB%E5%BD%95%E6%8C%89%E9%92%AE.gif)
 
-#### <h4 id=12>12、温度仪表盘</h4>
+#### <h4 id=14>14、温度仪表盘</h4>
 ![image](https://github.com/SunnyBoolean/GeoUiBox/blob/master/app/gif-images/%E6%B8%A9%E5%BA%A6%E4%BB%AA%E8%A1%A8%E7%9B%98.gif)
 
 
